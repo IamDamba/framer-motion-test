@@ -1,6 +1,7 @@
 // ||||||||||||||||||||||||||||| Dependances ||||||||||||||||||||||||||||||||||||
 
 import { useState, useEffect } from "react";
+import Box1 from "../components/box1/Box1";
 
 // ||||||||||||||||||||||||||||| App Component ||||||||||||||||||||||||||||||||||||
 
@@ -15,9 +16,9 @@ const App = () => {
 
   // Return
   return (
-    <div>
-      <p>Hello World</p>
-    </div>
+    <main>
+      <Box1 />
+    </main>
   );
 };
 export default App;
