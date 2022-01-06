@@ -4,11 +4,14 @@ import "../../styles/components/box/box.scss";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-// ||||||||||||||||||||||||||||| Box1 Component ||||||||||||||||||||||||||||||||||||
+// ||||||||||||||||||||||||||||| Box4 Component ||||||||||||||||||||||||||||||||||||
 
-const Box1 = () => {
+const Box4 = () => {
   // Hooks
-  const [isAnimate, setIsAnimate] = useState(false);
+  const [val, setVal] = useState();
+
+  //Variables
+  const boxVariable = {};
 
   // Functions
   useEffect(() => {
@@ -20,23 +23,16 @@ const Box1 = () => {
     <div className="box-container">
       <motion.div
         className="box"
-        initial={{
-          x: 0,
-          opacity: 0.5,
-          rotate: 0,
-        }}
         animate={{
-          x: isAnimate ? 1000 : 0,
-          opacity: isAnimate ? 1 : 0.5,
-          rotate: isAnimate ? 360 : 0,
+          scale: [1, 1.4, 1.4, 1, 1],
+          borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+          rotate: [0, 0, 127, 127, 0],
         }}
         transition={{
-          type: "spring",
-          stiffness: 50,
+          duration: 3,
         }}
-        onClick={() => setIsAnimate(!isAnimate)}
       ></motion.div>
     </div>
   );
 };
-export default Box1;
+export default Box4;
